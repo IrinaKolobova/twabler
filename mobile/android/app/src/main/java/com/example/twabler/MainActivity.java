@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView_tweetToTag, textView_tagTweet;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
