@@ -16,6 +16,13 @@
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Welcome" />
+
+        <activity android:name=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.twabler.Login" />
+        </activity>
+
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,12 +55,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:parentActivityName="twabler.Login"
-                android:value="com.example.twabler.Login" />
         </activity>
         <activity android:name=".Registration" />
     </application>

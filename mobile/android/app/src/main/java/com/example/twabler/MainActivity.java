@@ -15,6 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
+import com.google.android.flexbox.FlexDirection;
+import com.google.android.flexbox.FlexboxLayout;
+
 import java.util.ArrayList;
 
 
@@ -23,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView_tweetToTag;
     private Button button_skip, button_submit;
     private DrawerLayout drawer;
+    private FlexboxLayout tagLayout;
 
     int numberOfWords;
     ArrayList<String> twitText = new ArrayList<>();
-    LinearLayout tagLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         button_submit = findViewById(R.id.button_submit);
         drawer = findViewById(R.id.drawer_layout);
 
-        tagLayout = findViewById(R.id.tagLayout);
+        tagLayout = (FlexboxLayout) findViewById(R.id.tagLayout);
+        tagLayout.setFlexDirection(FlexDirection.ROW);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
