@@ -42,6 +42,12 @@
     <string name="menu_menu">Menu</string>
     <string name="menu_drawer_open">Open menu drawer</string>
     <string name="menu_drawer_close">Close menu drawer</string>
+    <string name="label1">Service</string>
+    <string name="label2">Communication</string>
+    <string name="label3">Physical condition</string>
+    <string name="label4">Other</string>
+    <string name="labels">Labels</string>
+    <string name="text">Text</string>
 
 
 </resources>

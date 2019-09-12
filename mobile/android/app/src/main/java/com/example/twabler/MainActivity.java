@@ -1,6 +1,5 @@
 package com.example.twabler;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView_tweetToTag;
     private Button button_skip, button_submit;
     private DrawerLayout drawer;
-    private FlexboxLayout tagLayout;
+    private FlexboxLayout tagLayout, labelsLayout;
 
     int numberOfWords;
     ArrayList<String> twitText = new ArrayList<>();
@@ -35,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView_tweetToTag = findViewById(R.id.textView_tweetToTag);
         button_skip = findViewById(R.id.button_skip);
         button_submit = findViewById(R.id.button_submit);
         drawer = findViewById(R.id.drawer_layout);
-
+        labelsLayout = (FlexboxLayout) findViewById(R.id.labelsLayout);
+        labelsLayout.setFlexDirection(FlexDirection.ROW);
         tagLayout = (FlexboxLayout) findViewById(R.id.tagLayout);
         tagLayout.setFlexDirection(FlexDirection.ROW);
 

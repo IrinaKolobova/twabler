@@ -6,4 +6,9 @@
     <color name="colorLoginButton">#3F51B5</color>
     <color name="colorTrueWhite">#FFFFFF</color>
 
+    <color name="label1">#9C27B0</color>
+    <color name="label2">#8BC34A</color>
+    <color name="label3">#2196F3</color>
+    <color name="label4">#00BCD4</color>
+
 </resources>
