@@ -8,14 +8,14 @@
     android:theme="@style/AppTheme"
     app:itemIconTint="@color/colorTrueWhite"
     app:itemTextColor="@color/colorTrueWhite"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     tools:openDrawer="start">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.twabler.MainActivity">
+        tools:context="com.nltweets.twabler.activities.MainActivity">
 
         <Button
             android:id="@+id/button_skip"
@@ -124,28 +124,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/label1"
-                android:text="@string/label1" />
+                android:text="@string/label1"
+                android:onClick="label1"/>
 
             <Button
                 android:id="@+id/label2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/label2"
-                android:text="@string/label2" />
+                android:text="@string/label2"
+                android:onClick="label2"/>
 
             <Button
                 android:id="@+id/label3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/label3"
-                android:text="@string/label3" />
+                android:text="@string/label3"
+                android:onClick="label3"/>
 
             <Button
                 android:id="@+id/label4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/label4"
-                android:text="@string/label4" />
+                android:text="@string/label4"
+                android:onClick="label4"/>
 
         </com.google.android.flexbox.FlexboxLayout>
 
@@ -178,6 +182,16 @@
         app:itemIconTint="@color/colorPrimaryDark"
         app:itemTextColor="@color/colorPrimaryDark"
         app:menu="@menu/activity_menu_drawer">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:text="@string/close"
+            android:background="@drawable/button"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="close_menu"/>
 
     </android.support.design.widget.NavigationView>
 

@@ -48,6 +48,12 @@
     <string name="label4">Other</string>
     <string name="labels">Labels</string>
     <string name="text">Text</string>
+    <string name="close">Close</string>
+    <string name="email_error">Please enter a valid email</string>
+    <string name="date_error">Please enter a valid date mm/dd/yyyy</string>
+    <string name="password_error">Please enter a valid password</string>
+    <string name="name_error">Please enter a valid name</string>
+    <string name="required_error">This field id required</string>
 
 
 </resources>

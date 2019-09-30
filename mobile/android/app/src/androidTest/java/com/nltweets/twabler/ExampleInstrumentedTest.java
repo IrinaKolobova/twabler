@@ -1,4 +1,4 @@
-package com.example.twabler;
+package com.nltweets.twabler;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

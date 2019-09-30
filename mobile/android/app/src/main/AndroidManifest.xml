@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.twabler">
+    package="com.nltweets.twabler">
 
     <application
         android:allowBackup="true"
@@ -12,18 +12,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".MenuActivity"
+            android:name="com.nltweets.twabler.activities.MenuActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Welcome" />
+        <activity android:name="com.nltweets.twabler.activities.Welcome" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.nltweets.twabler.activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.twabler.Login" />
+                android:value="com.nltweets.twabler.activities.Login" />
         </activity>
 
-        <activity android:name=".Splash">
+        <activity android:name="com.nltweets.twabler.activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,11 +31,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUpOrLogIn"
-            android:parentActivityName=".Splash">
+            android:name="com.nltweets.twabler.activities.SignUpOrLogIn"
+            android:parentActivityName="com.nltweets.twabler.activities.Splash">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.twabler.Splash" />
+                android:value="com.nltweets.twabler.activities.Splash" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,11 +44,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login"
-            android:parentActivityName=".SignUpOrLogIn">
+            android:name="com.nltweets.twabler.activities.Login"
+            android:parentActivityName="com.nltweets.twabler.activities.SignUpOrLogIn">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.twabler.SignUpOrLogIn" />
+                android:value="com.nltweets.twabler.activities.SignUpOrLogIn" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,7 +56,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registration" />
+        <activity android:name="com.nltweets.twabler.activities.Registration" />
     </application>
 
 </manifest>

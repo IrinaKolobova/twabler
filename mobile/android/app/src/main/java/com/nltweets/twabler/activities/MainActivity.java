@@ -1,6 +1,8 @@
-package com.example.twabler;
+package com.nltweets.twabler.activities;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexboxLayout;
+import com.nltweets.twabler.R;
 
 import java.util.ArrayList;
 
@@ -22,7 +25,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView_tweetToTag;
-    private Button button_skip, button_submit;
+    private Button button_skip, button_submit, button_label1, button_label2, button_label3, button_label4;
     private DrawerLayout drawer;
     private FlexboxLayout tagLayout, labelsLayout;
 
@@ -33,8 +36,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         button_skip = findViewById(R.id.button_skip);
         button_submit = findViewById(R.id.button_submit);
+        button_label1 = findViewById(R.id.label1);
+        button_label2 = findViewById(R.id.label2);
+        button_label3 = findViewById(R.id.label3);
+        button_label4 = findViewById(R.id.label4);
+
         drawer = findViewById(R.id.drawer_layout);
         labelsLayout = (FlexboxLayout) findViewById(R.id.labelsLayout);
         labelsLayout.setFlexDirection(FlexDirection.ROW);
@@ -75,13 +84,21 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView[] tagTextViews = new TextView[numberOfWords];
         for (int i = 0; i < numberOfWords; i++) {
-            TextView wordTextView = new TextView(this);
+            final TextView wordTextView = new TextView(this);
             wordTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 45));
             wordTextView.setGravity(Gravity.CENTER_VERTICAL);
             wordTextView.setPadding(0, 0, 20, 0);
             wordTextView.setText(twitText.get(i));
             tagLayout.addView(wordTextView);
             tagTextViews[i] = wordTextView;
+            //TextView text = (TextView) activity.findViewById(R.id.text);
+            //text.setClickable(true)
+            wordTextView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    wordTextView.setBackgroundColor(getResources().getColor(R.color.label1));
+                }
+            });
         }
     }
 
@@ -94,10 +111,31 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void label1(View view){
+        button_label1.setBackground(getDrawable(R.drawable.button_selected));
+    }
+
+    public void label2(View view){
+
+    }
+
+    public void label3(View view){
+
+    }
+
+    public void label4(View view){
+
+    }
+
     public void skip(View view) {
     }
 
     public void submit(View view) {
+    }
+
+    public void close_menu(View view) {
+        drawer.closeDrawers();
     }
 
 /*
