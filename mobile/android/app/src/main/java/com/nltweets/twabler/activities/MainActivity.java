@@ -18,6 +18,8 @@ import android.support.v7.widget.Toolbar;
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexboxLayout;
 import com.nltweets.twabler.R;
+import com.nltweets.twabler.utils.ExternalOnClickListenerLabels;
+import com.nltweets.twabler.utils.ExternalOnClickListenerTag;
 
 import java.util.ArrayList;
 
@@ -28,9 +30,12 @@ public class MainActivity extends AppCompatActivity {
     private Button button_skip, button_submit, button_label1, button_label2, button_label3, button_label4;
     private DrawerLayout drawer;
     private FlexboxLayout tagLayout, labelsLayout;
+    public static boolean isLabelSelected = false;
+    public static Button selectedLabel;
 
-    int numberOfWords;
-    ArrayList<String> twitText = new ArrayList<>();
+    int numberOfTwitWords;
+    ArrayList<String> twitWords = new ArrayList<>();
+    ArrayList<Button> tags = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,49 +63,16 @@ public class MainActivity extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         //toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorTrueWhite));
-        addWords();
+        addTags();
         addTextViews();
 
+        button_label1.setOnClickListener(new ExternalOnClickListenerLabels(this, button_label1));
+        button_label2.setOnClickListener(new ExternalOnClickListenerLabels(this, button_label2));
+        button_label3.setOnClickListener(new ExternalOnClickListenerLabels(this, button_label3));
+        button_label4.setOnClickListener(new ExternalOnClickListenerLabels(this, button_label4));
 
     }
 
-    public void addWords(){
-        //hardcoded! in the future get words from json
-        twitText.add("Lorem");
-        twitText.add("ipsum");
-        twitText.add("dolor");
-        twitText.add("sit");
-        twitText.add("amet");
-        twitText.add("consectetur");
-        twitText.add("adipiscing");
-        twitText.add("elit");
-        twitText.add("sed");
-
-        numberOfWords = twitText.size();
-    }
-
-    //test version (just to make dynamic text views work)
-    public void addTextViews(){
-
-        final TextView[] tagTextViews = new TextView[numberOfWords];
-        for (int i = 0; i < numberOfWords; i++) {
-            final TextView wordTextView = new TextView(this);
-            wordTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 45));
-            wordTextView.setGravity(Gravity.CENTER_VERTICAL);
-            wordTextView.setPadding(0, 0, 20, 0);
-            wordTextView.setText(twitText.get(i));
-            tagLayout.addView(wordTextView);
-            tagTextViews[i] = wordTextView;
-            //TextView text = (TextView) activity.findViewById(R.id.text);
-            //text.setClickable(true)
-            wordTextView.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v) {
-                    wordTextView.setBackgroundColor(getResources().getColor(R.color.label1));
-                }
-            });
-        }
-    }
 
     @Override
     public void onBackPressed(){
@@ -109,33 +81,98 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+        
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void label1(View view){
-        button_label1.setBackground(getDrawable(R.drawable.button_selected));
+    public void addTags(){
+        //hardcoded! in the future get words from json
+        twitWords.add("Lorem");
+        twitWords.add("ipsum");
+        twitWords.add("dolor");
+        twitWords.add("sit");
+        twitWords.add("amet");
+        twitWords.add("consectetur");
+        twitWords.add("adipiscing");
+        twitWords.add("elit");
+        twitWords.add("do");
+        twitWords.add("eiusmod");
+        twitWords.add("tempor");
+        twitWords.add("incididunt");
+        twitWords.add("ut");
+        twitWords.add("labore");
+        twitWords.add("et");
+        twitWords.add("dolore");
+        twitWords.add("magna");
+        twitWords.add("aliqua");
+
+        numberOfTwitWords = twitWords.size();
     }
 
-    public void label2(View view){
+   /* public void addTags(){
+        //hardcoded! in the future get words from json
+        tags.add(button_label1);
+        tags.add(button_label2);
+        tags.add(button_label3);
+        tags.add(button_label4);
+    }
+
+    public void addButtons(){
+        for(Button tag: tags){
+            final Button
+        }
+    }*/
+
+    public void addTextViews(){
+
+        //final TextView[] tagTextViews = new TextView[numberOfWords];
+        for(String twitWordToTag : twitWords){
+            final TextView wordTextView = new TextView(this);
+            wordTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 45));
+            wordTextView.setGravity(Gravity.CENTER_VERTICAL);
+            wordTextView.setPadding(0, 0, 20, 0);
+            wordTextView.setText(twitWordToTag);
+            tagLayout.addView(wordTextView);
+            wordTextView.setClickable(true);
+
+
+        }
 
     }
 
-    public void label3(View view){
 
+    private boolean tag(TextView textView, Button label){
+
+        boolean isTagged = false;
+        //textView.setOnClickListener(new ExternalOnClickListenerTag(true, ));
+
+        return isTagged;
     }
 
-    public void label4(View view){
 
+    public void skip_tweet(View view) {
     }
 
-    public void skip(View view) {
-    }
-
-    public void submit(View view) {
+    public void submit_tweet(View view) {
     }
 
     public void close_menu(View view) {
         drawer.closeDrawers();
+    }
+
+    public Button getSelectedLabel(){
+        return selectedLabel;
+    }
+
+    public void setSelectedLabel(Button newSelectedLabel){
+        this.selectedLabel = newSelectedLabel;
+    }
+
+    public boolean getIsLabelSelected(){
+        return isLabelSelected;
+    }
+
+    public void setIsLabelSelected(boolean isLabelSelected){
+        this.isLabelSelected = isLabelSelected;
     }
 
 /*

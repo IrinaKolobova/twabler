@@ -40,4 +40,12 @@
         <item name="color">@color/colorTrueWhite</item>
     </style>
 
+    <style name="LabelDeselected" parent="android:Widget.Button">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="LabelSelected" parent="android:Widget.Button">
+        <item name="android:textSize">22sp</item>
+    </style>
+
 </resources>
