@@ -8,14 +8,14 @@
     android:theme="@style/AppTheme"
     app:itemIconTint="@color/colorTrueWhite"
     app:itemTextColor="@color/colorTrueWhite"
-    tools:context=".activities.MainActivity"
+    tools:context=".activities.MainLabelingActivity"
     tools:openDrawer="start">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.nltweets.twabler.activities.MainActivity">
+        tools:context="com.nltweets.twabler.activities.MainLabelingActivity">
 
         <Button
             android:id="@+id/button_skip"
@@ -27,11 +27,11 @@
             android:onClick="skip_tweet"
             android:text="@string/button_skip"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_submit"
+            app:layout_constraintEnd_toStartOf="@+id/button_logIn"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button_submit"
+            android:id="@+id/button_logIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -123,28 +123,24 @@
                 android:id="@+id/label1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/label1"
                 android:text="@string/label1" />
 
             <Button
                 android:id="@+id/label2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/label2"
                 android:text="@string/label2" />
 
             <Button
                 android:id="@+id/label3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/label3"
                 android:text="@string/label3" />
 
             <Button
                 android:id="@+id/label4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/label4"
                 android:text="@string/label4" />
 
         </com.google.android.flexbox.FlexboxLayout>

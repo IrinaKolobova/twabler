@@ -17,7 +17,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name="com.nltweets.twabler.activities.Welcome" />
 
-        <activity android:name="com.nltweets.twabler.activities.MainActivity">
+        <activity android:name="com.nltweets.twabler.activities.MainLabelingActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nltweets.twabler.activities.Login" />

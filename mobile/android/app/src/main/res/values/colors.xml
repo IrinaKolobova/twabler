@@ -5,6 +5,8 @@
     <color name="colorFocusedText">#009E9B</color>
     <color name="colorLoginButton">#3F51B5</color>
     <color name="colorTrueWhite">#FFFFFF</color>
+    <color name="colorDisabled">#D4D4D4</color>
+    <color name="colorDisabledDark">#A0A0A0</color>
 
     <color name="label1">#9C27B0</color>
     <color name="label2">#8BC34A</color>
