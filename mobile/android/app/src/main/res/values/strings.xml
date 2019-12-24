@@ -1,13 +1,28 @@
 <resources>
     <string name="app_name">Twabler</string>
+
+    <!--login-->
+    <string name="textView_welcomeLogin">Welcome to Twabler</string>
+    <string name="textView_login">Enter your email address to log in to the prototype</string>
+    <string name="editText_email">Email</string>
+    <string name="button_logIn">Login</string>
+
+    <!--thanks-->
+    <string name="button_startLabeling">Start labeling</string>
+    <string name="button_instructions">Instructions</string>
+    <string name="textView_thanks">Thanks for your help!</string>
+    <string name="textView_appDescription">Twabler is a training device for a machine learning algorithm. It will be a powerful tool for NPOs to use in gathering attitudinal data from social media. By helping in the development of this tool, you are improving outcomes for non-profit civic orgs around the country. Awesome! </string>
+
+    <!--toolbar-->
+
+
     <string name="button_skip">Skip</string>
     <string name="button_submit">Submit</string>
     <string name="editText_password">Password</string>
     <string name="editText_firstName">First name</string>
     <string name="editText_lastName">Last name</string>
-    <string name="editText_email">Email</string>
     <string name="editText_dateOfBirth">Date of birth</string>
-    <string name="textView_login">Enter your email address to log in to the prototype</string>
+
     <string name="textView_password">Password</string>
     <string name="textView_tagTweet">Tag tweet</string>
     <string name="textView_createAccount">Create account</string>
@@ -16,9 +31,10 @@
     <string name="textView_createLogin">Create your login name:</string>
     <string name="editText_createLogin">Login</string>
     <string name="textView_createPassword">Create your password:</string>
+
     <string name="button_register">register</string>
     <string name="button_signUp">Sign up</string>
-    <string name="button_logIn">Login</string>
+
     <string name="textView_welcome">Welcome to Twabler</string>
     <string name="textView_description">Tag tweets for\nour project</string>
     <string name="editText_createPassword">Create password</string>
@@ -54,7 +70,7 @@
     <string name="password_error">Please enter a valid password</string>
     <string name="name_error">Please enter a valid name</string>
     <string name="required_error">This field id required</string>
-    <string name="textView_welcomeLogin">Welcome to Twabler</string>
+
 
 
 </resources>

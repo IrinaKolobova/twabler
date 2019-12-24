@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity
             android:name="com.nltweets.twabler.activities.MenuActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.nltweets.twabler.activities.Welcome" />
 
-        <activity android:name="com.nltweets.twabler.activities.MainLabelingActivity">
+        <activity android:name="com.nltweets.twabler.activities.LabelingActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nltweets.twabler.activities.Login" />
@@ -26,10 +26,10 @@
         <activity android:name="com.nltweets.twabler.activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.nltweets.twabler.activities.SignUpOrLogIn"
             android:parentActivityName="com.nltweets.twabler.activities.Splash">
@@ -39,10 +39,11 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
         </activity>
+
         <activity
             android:name="com.nltweets.twabler.activities.Login"
             android:parentActivityName="com.nltweets.twabler.activities.SignUpOrLogIn">
@@ -52,10 +53,13 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
         </activity>
+
+        <activity android:name="com.nltweets.twabler.activities.Thanks" />
+
         <activity android:name="com.nltweets.twabler.activities.Registration" />
     </application>
 

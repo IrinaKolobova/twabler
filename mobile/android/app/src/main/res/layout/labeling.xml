@@ -8,14 +8,14 @@
     android:theme="@style/AppTheme"
     app:itemIconTint="@color/colorTrueWhite"
     app:itemTextColor="@color/colorTrueWhite"
-    tools:context=".activities.MainLabelingActivity"
+    tools:context=".activities.LabelingActivity"
     tools:openDrawer="start">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.nltweets.twabler.activities.MainLabelingActivity">
+        tools:context="com.nltweets.twabler.activities.LabelingActivity">
 
         <Button
             android:id="@+id/button_skip"
