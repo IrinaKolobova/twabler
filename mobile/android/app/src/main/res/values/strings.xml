@@ -6,34 +6,57 @@
     <string name="textView_login">Enter your email address to log in to the prototype</string>
     <string name="editText_email">Email</string>
     <string name="button_logIn">Login</string>
+    <string name="editText_password">Password</string>
+    <string name="editText_firstName">First name</string>
+    <string name="editText_lastName">Last name</string>
+    <string name="editText_dateOfBirth">Date of birth</string>
+    <string name="textView_password">Password</string>
 
     <!--thanks-->
     <string name="button_startLabeling">Start labeling</string>
     <string name="button_instructions">Instructions</string>
     <string name="textView_thanks">Thanks for your help!</string>
-    <string name="textView_appDescription">Twabler is a training device for a machine learning algorithm. It will be a powerful tool for NPOs to use in gathering attitudinal data from social media. By helping in the development of this tool, you are improving outcomes for non-profit civic orgs around the country. Awesome! </string>
+    <string name="textView_appDescription">Twabler is a training device for a machine learning algorithm.
+        It will be a powerful tool for NPOs to use in gathering attitudinal data from social media.
+        By helping in the development of this tool, you are improving outcomes for non-profit civic orgs around the country. Awesome! </string>
 
     <!--toolbar-->
 
 
+    <!--instructions-->
+    <string name="textView_instructions">Instructions</string>
+    <string name="textView_instructionsText1">Your role is to help the Natural Language Processing (NLP) algorithm better understand complex human communication. \n\n
+                                            Specifically, tweets. \n\n
+
+    </string>
+    <string name="textView_instructionsText2">Instructions</string>
+    <string name="textView_instructionsText3">Instructions</string>
+    <string name="textView_instructionsText4">Instructions</string>
+
+    <!--labeling-->
+    <string name="label1">Routes</string>
+    <string name="label2">Communication</string>
+    <string name="label3">Physical condition</string>
+    <string name="label4">Other</string>
+    <string name="textView_labeling">Labeling:</string>
+    <string name="textView_tweet">Tweet:</string>
+    <string name="textView_submission">Submission:</string>
     <string name="button_skip">Skip</string>
     <string name="button_submit">Submit</string>
-    <string name="editText_password">Password</string>
-    <string name="editText_firstName">First name</string>
-    <string name="editText_lastName">Last name</string>
-    <string name="editText_dateOfBirth">Date of birth</string>
+    <string name="button_add">+ add</string>
 
-    <string name="textView_password">Password</string>
     <string name="textView_tagTweet">Tag tweet</string>
+
+    <!--registration-->
     <string name="textView_createAccount">Create account</string>
     <string name="textView_emailReg">Enter your email:</string>
     <string name="editText_emailReg">Email</string>
     <string name="textView_createLogin">Create your login name:</string>
     <string name="editText_createLogin">Login</string>
     <string name="textView_createPassword">Create your password:</string>
-
     <string name="button_register">register</string>
     <string name="button_signUp">Sign up</string>
+
 
     <string name="textView_welcome">Welcome to Twabler</string>
     <string name="textView_description">Tag tweets for\nour project</string>
@@ -58,19 +81,15 @@
     <string name="menu_menu">Menu</string>
     <string name="menu_drawer_open">Open menu drawer</string>
     <string name="menu_drawer_close">Close menu drawer</string>
-    <string name="label1">Service</string>
-    <string name="label2">Communication</string>
-    <string name="label3">Physical condition</string>
-    <string name="label4">Other</string>
-    <string name="labels">Labels</string>
-    <string name="text">Text</string>
-    <string name="close">Close</string>
+
+    <string name="button_close">Close</string>
+
+    <!--error msg-->
     <string name="email_error">Please enter a valid email</string>
     <string name="date_error">Please enter a valid date mm/dd/yyyy</string>
     <string name="password_error">Please enter a valid password</string>
     <string name="name_error">Please enter a valid name</string>
     <string name="required_error">This field id required</string>
-
 
 
 </resources>

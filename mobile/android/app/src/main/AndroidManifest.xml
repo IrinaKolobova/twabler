@@ -11,56 +11,51 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".activities.Instructions"></activity>
         <activity
-            android:name="com.nltweets.twabler.activities.MenuActivity"
+            android:name=".activities.MenuActivity"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.nltweets.twabler.activities.LabelingActivity">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.LabelingActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nltweets.twabler.activities.Login" />
         </activity>
-
-        <activity android:name="com.nltweets.twabler.activities.Splash">
+        <activity android:name=".activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.nltweets.twabler.activities.SignUpOrLogIn"
-            android:parentActivityName="com.nltweets.twabler.activities.Splash">
+            android:name=".activities.SignUpOrLogIn"
+            android:parentActivityName=".activities.Splash">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nltweets.twabler.activities.Splash" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-
         <activity
-            android:name="com.nltweets.twabler.activities.Login"
-            android:parentActivityName="com.nltweets.twabler.activities.SignUpOrLogIn">
+            android:name=".activities.Login"
+            android:parentActivityName=".activities.SignUpOrLogIn">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nltweets.twabler.activities.SignUpOrLogIn" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-
-        <activity android:name="com.nltweets.twabler.activities.Thanks" />
-
-        <activity android:name="com.nltweets.twabler.activities.Registration" />
+        <activity android:name=".activities.Thanks" />
+        <activity android:name=".activities.Registration" />
     </application>
 
 </manifest>
