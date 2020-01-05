@@ -45,7 +45,8 @@
             android:textColor="@color/colorTrueWhite"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/labelsLayout"
-            app:layout_constraintTop_toTopOf="@+id/guidelineToolbar" />
+            app:layout_constraintTop_toTopOf="@+id/guidelineToolbar"
+            tools:layout_editor_absoluteX="32dp" />
 
         <TextView
             android:id="@+id/textView_tweet"
@@ -195,7 +196,7 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
+            android:layout_gravity="center|end"
             android:background="@drawable/button"
             android:onClick="close_menu"
             android:text="@string/button_close"

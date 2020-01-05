@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:padding="0dp"
+    android:layout_margin="8dp"
+    android:textSize="15dp"
+    android:maxHeight="0dp"
+    android:maxWidth="0dp">
+</shape>

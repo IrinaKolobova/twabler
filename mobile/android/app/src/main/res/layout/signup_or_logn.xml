@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUpOrLogIn"
+    android:background="@drawable/gradient_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/textView_welcome"
+                android:textSize="35sp"
+                android:textColor="@color/colorTrueWhite"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:text="@string/textView_description"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="@color/colorTrueWhite"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/button_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/button_signUp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+
+                android:background="@drawable/signup_button"
+                android:onClick="signUp"/>
+
+            <Button
+                android:id="@+id/button_lIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/button_logIn"
+                android:textColor="@color/colorTrueWhite"
+                android:textSize="20sp"
+                android:background="@drawable/button_enabled"
+                android:onClick="logIn"/>
+        </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

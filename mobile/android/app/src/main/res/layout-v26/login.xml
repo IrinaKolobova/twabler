@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    tools:context=".activities.Login">
+
+    <ImageView
+        android:id="@+id/logo_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_welcomeLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/textView_welcomeLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="32dp"
+        android:text="@string/textView_welcomeLogin"
+        android:textColor="@color/colorTrueWhite"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layout_loginPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_small"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/layout_loginPage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/form_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_welcomeLogin"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <TextView
+            android:id="@+id/textView_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:text="@string/textView_login"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/editText_email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="25sp"
+            android:theme="@style/EditTextSelectedTheme" />
+
+        <Button
+            android:id="@+id/button_logIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_login"
+            android:enabled="false"
+            android:onClick="login"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/button_logIn"
+            android:textColor="@color/colorTrueWhite"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

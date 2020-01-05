@@ -7,24 +7,28 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorFocusedText</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="EditTextSelectedTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorControlNormal">@color/colorPrimaryDark</item>
         <item name="colorControlActivated">@color/colorFocusedText</item>
         <item name="colorControlHighlight">@color/colorFocusedText</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="EditTextTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorControlNormal">@color/colorPrimaryDark</item>
         <item name="colorControlActivated">@color/colorPrimaryDark</item>
         <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -38,18 +42,22 @@
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@color/colorTrueWhite</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="LabelDeselected" parent="android:Widget.Button">
         <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="LabelSelected" parent="android:Widget.Button">
         <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
     <style name="TagSelected" parent="android:Widget">
         <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
 </resources>
